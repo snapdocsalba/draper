@@ -31,6 +31,7 @@ module Draper
     #
     # @return [HelperProxy]
     def self.current
+      puts caller
       RequestStore.store.fetch(:current_view_context) { build! }
     end
 
